@@ -1,3 +1,5 @@
+@section('mytitle', '| Register')
+
 @extends('base')
 
 @section('content')

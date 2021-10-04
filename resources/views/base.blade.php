@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <title>IPT2 P4</title>
+    <title>IPT2 P4 @yield('mytitle')</title>
 </head>
 <body class="bg-dark">
     {{-- @if (session('Error'))
@@ -51,6 +51,7 @@
     $(document).ready(function(){
         
         $('#mydatatable').DataTable();
+        $('#logsdatatable').DataTable();
     
         $('.form-group input').click(function(e) {
             $(this).parent().removeClass('has-error');

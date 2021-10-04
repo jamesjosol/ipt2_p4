@@ -18,6 +18,11 @@
                         <a class="nav-link" href="{{url('/dashboard')}}"><i class="fas fa-th-large"></i> Dashboard</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" data-target="#logsModal"><i class="fas fa-file-alt"></i> Logs</a>
+                    </li>
+                    
+
                     <li class="nav-item dropdown" style="cursor: pointer">
 						<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" width="30" height="30" class="rounded-circle"> &nbsp;{{ auth()->user()->name }}</a>
 						<div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">

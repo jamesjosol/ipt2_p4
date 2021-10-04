@@ -1,5 +1,7 @@
 @extends('base')
 
+@section('mytitle', '| Dashboard')
+
 @section('content')
 
 @include('partials.info_msg')
@@ -43,5 +45,6 @@
         </table>  
         @include('partials.edit')
         @include('partials.delete')
+        @include('partials.logs')
     </div>
 @endsection

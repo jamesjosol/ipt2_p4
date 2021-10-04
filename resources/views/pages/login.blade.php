@@ -1,3 +1,5 @@
+@section('mytitle', '| Login')
+
 @extends('base')
 
 @section('content')

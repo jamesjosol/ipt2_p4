@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Events\UserLog;
 use App\Models\Item;
+use App\Models\Log;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
 {
     public function index() {
         $items = Item::get();
-        return view('pages.dashboard', compact('items'));
+        $logs = Log::get();
+        return view('pages.dashboard', compact('items', 'logs'));
     }
 
 
