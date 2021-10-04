@@ -25,7 +25,7 @@
                         <span class="errspan" id="errspan">{{ $errors->first('password') }}</span>
                     </div>
                     <div class="form-group text-center">
-                        <button class="btn btn-primary" id="actionBtn" onclick="btnload()" type="submit"><i class="fas fa-sign-in"></i> Login</button>
+                        <button class="btn btn-primary" id="actionBtn" onclick="btnload('Logging in...')" type="submit"><i class="fas fa-sign-in"></i> Login</button>
                     </div>
                 {!! Form::close() !!}
             </div>

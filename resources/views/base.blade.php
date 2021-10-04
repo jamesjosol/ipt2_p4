@@ -73,9 +73,9 @@
         document.getElementById('dismiss').parentNode.parentNode.style.display='none';
     }
 
-    function btnload() {
+    function btnload(msg) {
         btn = document.getElementById('actionBtn');
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Please wait...';
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + (typeof(msg) !== 'undefined' ? msg : 'Please wait...');
     }
 </script>
 </html>
