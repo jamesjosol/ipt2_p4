@@ -19,7 +19,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" data-target="#logsModal"><i class="fas fa-file-alt"></i> Logs</a>
+                        <a class="nav-link" data-toggle="modal" data-target="#logsModal" style="cursor: pointer"><i class="fas fa-file-alt"></i> Logs</a>
                     </li>
                     
 

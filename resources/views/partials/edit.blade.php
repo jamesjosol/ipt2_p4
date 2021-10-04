@@ -14,19 +14,19 @@
             {!! Form::hidden('id', null, ['class'=>'form-control', 'id'=>'modal-input-id']) !!}
             <div class="form-group">
                 {!! Form::label('name','Name',[],false) !!}
-                {!! Form::text('name', null, ['class'=>'form-control', 'id'=>'modal-input-name']) !!}
+                {!! Form::text('name', null, ['class'=>'form-control', 'id'=>'modal-input-name', 'required' => 'required']) !!}
             </div> 
             <div class="form-group">
                 {!! Form::label('description', 'Description',[],false) !!}
-                {!! Form::text('description', null, ['class'=>'form-control', 'id'=>'modal-input-description']) !!}
+                {!! Form::text('description', null, ['class'=>'form-control', 'id'=>'modal-input-description', 'required' => 'required']) !!}
             </div> 
             <div class="form-group">
                 {!! Form::label('price', 'Price',[],false) !!}
-                {!! Form::number('price', null, ['class'=>'form-control', 'step'=>'any', 'id'=>'modal-input-price']) !!}
+                {!! Form::number('price', null, ['class'=>'form-control', 'step'=>'any', 'id'=>'modal-input-price', 'required' => 'required']) !!}
             </div>
             <div class="form-group">
                 {!! Form::label('quantity', 'Quantity',[],false) !!}
-                {!! Form::number('quantity', null, ['class'=>'form-control', 'id'=>'modal-input-quantity']) !!}
+                {!! Form::number('quantity', null, ['class'=>'form-control', 'id'=>'modal-input-quantity', 'required' => 'required']) !!}
             </div>
      
             <div class="form-group">
@@ -41,7 +41,7 @@
     $(document).ready(function() {
 
         $(document).on('click', "#edit-item", function() {
-            $(this).addClass('edit-item-trigger-clicked'); //useful for identifying which trigger was clicked and consequently grab data from the correct row and not the wrong one.
+            $(this).addClass('edit-item-trigger-clicked');
 
             var options = {
             'backdrop': 'static'
@@ -51,17 +51,15 @@
 
         // on modal show
         $('#edit-modal').on('show.bs.modal', function() {
-            var el = $(".edit-item-trigger-clicked"); // See how its usefull right here? 
+            var el = $(".edit-item-trigger-clicked"); 
             var row = el.closest(".data-row");
 
-            // get the data
             var id = el.data('item-id');
             var name = row.children(".name").text();
             var description = row.children(".description").text();
             var price = row.children(".price").text();
             var quantity = row.children(".quantity").text();
 
-            // fill the data in the input fields
             $("#modal-input-id").val(id);
             $("#modal-input-name").val(name);
             $("#modal-input-description").val(description);
@@ -70,7 +68,6 @@
 
         })
 
-        // on modal hide
         $('#edit-modal').on('hide.bs.modal', function() {
             $('.edit-item-trigger-clicked').removeClass('edit-item-trigger-clicked')
             $("#edit-form").trigger("reset");
